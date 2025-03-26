@@ -110,7 +110,7 @@ Install wireshark inside the Windows 10 VM
 
 Observe the network traffic
 - Open Microsoft Windows PowerShell as we prepare to observe network traffic
--In Wireshark, start packet capture by clicking the blue fin icon at the top left(under the "File" button)
+- In Wireshark, start packet capture by clicking the blue fin icon at the top left(under the "File" button)
 
 <p>
 <img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
@@ -145,7 +145,7 @@ Attempt to ping a public website within PowerShell and observe traffic (example.
 </p>
 <br />
 
-Initiate a nonstop ping from your Windows virtual machine to your Linux(Ubuntu) virtual machine by typing "-t" at the end of the ping (example. "ping 10.0.0.5 -t") and observe traffic
+Initiate a perpetual/non-stop ping from your Windows 10 VM to your Ubuntu VM, type "-t" at the end of the ping (example. "ping 10.0.0.5 -t") and observe traffic
 
 <p>
 <img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
@@ -165,11 +165,93 @@ Open the Network Security Group(NSG) your Linux(Ubuntu) virtual machine is using
 </p>
 <br />
 
+Open the Network Security Group your Ubuntu VM is using and disable incoming (inbound) ICMP traffic, while back in the Windows 10 VM, observe the ICMP traffic in WireShark and the command line Ping activity:
+
+<p>
+<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+
+</p>
+<br />
+
+
+<p>
+<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+
+</p>
+<br />
+
+Re-enable ICMP traffic for the Network Security Group in your Ubuntu VM and back in the Windows 10 VM, observe the ICMP traffic in WireShark and the command line ping activity (should start working again).Finally, stop the ping activity:
+
+<p>
+<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+
+</p>
+<br />
+
+
+Time to observe SSH traffic
+
+- In Wireshark, filter for SSH traffic only and from your Windows 10 VM, “SSH into” your Ubuntu virtual machine (via its private IP address). Type commands (ls, pwd, etc) into the linux SSH connection and observe SSH traffic spam in WireShark.
+
+- Exit the SSH connection by typing ‘exit’ and pressing [return]
+
+<p>
+<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+
+</p>
+<br />
+
+Observe DHCP Traffic
+- In Wireshark, filter for DHCP traffic only. From your Windows 10 VM, attempt to issue your VM a new IP address from the command line (ipconfig /renew)
+- Observe the DHCP traffic appearing in WireShark
+
+<p>
+<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+
+</p>
+<br />
+
+Observe DNS traffic
+- In Wireshark, filter for DNS traffic only
+- In your Windows 10 VM inside the command line, use nslookup to see what google.com and disney.com’s IP addresses are and observe the DNS traffic being shown in WireShark
+
+<p>
+<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+
+</p>
+<br />
+
+
+Observe the RDP traffic
+
+- In Wireshark, filter for RDP traffic only using "tcp.port==3389".
+- Observe traffic
+- Notice that traffic is non-stop because the RDP protocol is constantly showing a live stream from one computer to another, so traffic is always being transmitted
+
+<p>
+<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+
+</p>
+<br />  
 
 
 
 
+Clean up you Azure Enviroment 
 
+- Close your Remote Desktop connection, delete the Resource Group(s) created at the beginning of this tutorial, and verify Resource Group deletion. 
 
-  
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
