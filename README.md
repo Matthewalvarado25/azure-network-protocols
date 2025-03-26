@@ -23,10 +23,14 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 
 <h2>High-Level Steps</h2>
 
-- Step 1: Deploy an Azure Virtual Machine and Install Wireshark
-- Step 2: Monitor Network Traffic to and from the VM
-- Step 3: Experiment with Network Security Groups (NSGs)
-- Step 4: Validate NSG Rules with Wireshark
+- Create a resource group
+- Create a Windows 10 virtual machine
+- Create a Linux(Ubuntu) virtual machine
+- Make sure both virtual machines are in the same virtual network/subnet
+- Connect to Windows 10 virtual machine
+- Install and open Wireshark on Windows 10 virtual machine
+- Observe network traffic
+- Clean up Azure environment
 
 <h2>Actions and Observations</h2>
 
