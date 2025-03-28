@@ -176,7 +176,9 @@ Attempt to ping a public website within PowerShell and observe traffic (example.
 Initiate a perpetual/non-stop ping from your Windows 10 VM to your Ubuntu VM, type "-t" at the end of the ping (example. "ping 10.0.0.5 -t") and observe traffic
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+  
+![image](https://github.com/user-attachments/assets/a914de4c-7123-4bac-822e-bfdd807142e7)
+
 </p>
 <p>
 
