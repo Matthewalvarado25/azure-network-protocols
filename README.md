@@ -291,6 +291,14 @@ Observe the RDP traffic
 
 
 Clean up you Azure Enviroment 
+- Now that we're finished observing the network, DON'T FORGET TO CLEAN UP YOUR AZURE ENVIRONMENT!
+- Close your Remote Desktop connection, delete the Resource Group(s) created at the beginning of this lab, and verify Resource Group deletion. 
+<p>
+  
 
-- Close your Remote Desktop connection, delete the Resource Group(s) created at the beginning of this tutorial, and verify Resource Group deletion. 
 
+</p>
+<p>
+
+</p>
+<br />
