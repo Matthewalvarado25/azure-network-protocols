@@ -77,20 +77,24 @@ Create a Linux(Ubunutu) Virtual Machine
 
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+  
+![image](https://github.com/user-attachments/assets/20263cc4-fbb9-4158-9af4-5cecf414dda3)
+
 </p>
 <p>
   
 Make sure both virtual machines are in the same virtual network/subnet
 - In Azure, navigate to "Virtual Machines"
 - Click on your Windows virtual machine and check the name of the "Virtual network/subnet"
-- Click on your Linux virtual machine and make sure the "Virtual network/subnet" is the same as in your Window virtual machine
+- Click on your Linux virtual machine and make sure the "Virtual network/subnet" is the same as in your Window virtual machine (Ex: windows-vm-vnet)
 
 </p>
 <br />
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+  
+![image](https://github.com/user-attachments/assets/18c9fc89-5b29-4b5b-9b92-34deeb4d15e4)
+
 </p>
 <p>
 
@@ -104,7 +108,9 @@ Connect to Windows 10 Virtual Machine
 <br />
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+  
+![image](https://github.com/user-attachments/assets/e7e90063-37bd-4336-bc7b-4f5d26d2ebe0)
+
 </p>
 <p>
 
