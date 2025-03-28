@@ -123,7 +123,9 @@ Observe the network traffic
 - In Wireshark, start packet capture by clicking the blue fin icon at the top left(under the "File" button)
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+  
+![image](https://github.com/user-attachments/assets/563ebd10-5c67-4915-baa6-de1cdd8819d0)
+
 </p>
 <p>
 
@@ -138,17 +140,33 @@ ICMP Traffic
 - Observe ping requests and replies within Wireshark
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+  
+![image](https://github.com/user-attachments/assets/687588c5-0205-4dc4-b09e-2e7979292643)
+
 </p>
 <p>
 
 </p>
 <br />
 
+<p>
+  
+![image](https://github.com/user-attachments/assets/c25301bc-8178-4d66-94e6-f679119f8d55)
+
+</p>
+<p>
+
+</p>
+<br />
+
+
+
 Attempt to ping a public website within PowerShell and observe traffic (example. "ping www.google.com")
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+  
+![image](https://github.com/user-attachments/assets/5dce1e5e-4a47-4c45-8c2c-04cafc769867)
+
 </p>
 <p>
 
