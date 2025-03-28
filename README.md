@@ -41,7 +41,9 @@ Create a resource group
 
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+  
+![image](https://github.com/user-attachments/assets/0a217964-ccc9-4cf6-bdeb-216f808d4bdd)
+
 </p>
 <p>
 
@@ -57,7 +59,9 @@ Create a Windows 10 Virtual Machine
 - Review + create your virtual machine
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+  
+![image](https://github.com/user-attachments/assets/62033d65-bdef-4899-b46a-ecab64cd8709)
+
 </p>
 <p>
 
