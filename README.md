@@ -278,7 +278,9 @@ Observe the RDP traffic
 - Notice that traffic is non-stop because the RDP protocol is constantly showing a live stream from one computer to another, so traffic is always being transmitted
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+  
+![image](https://github.com/user-attachments/assets/16b053b4-5f95-4dea-ac76-5bc9592daef1)
+
 </p>
 <p>
 
