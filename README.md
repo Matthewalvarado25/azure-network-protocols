@@ -132,7 +132,7 @@ Observe the network traffic
 </p>
 <br />
 
-ICMP Traffic
+Lets observe ICMP traffic
 - In Wireshark, type in "ICMP" in the search bar and hit Enter to apply a filter that will only display ICMP traffic
 - In Azure, retrieve the private IP address for the Linux(Ubuntu) virtual machine you created the same way you retrieved the Windows 10 public IP address
 - After retrieving the private IP address, we are going to attempt to ping from within the Windows 10 virtual machine
@@ -188,7 +188,9 @@ Initiate a perpetual/non-stop ping from your Windows 10 VM to your Ubuntu VM, ty
 Open the Network Security Group(NSG) your Linux(Ubuntu) virtual machine is using within Azure and disable incoming ICMP traffic by creating a port rule that denies ICMP traffic
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+  
+![image](https://github.com/user-attachments/assets/59587692-2ac2-4d2b-b479-98c7c3259ccf)
+
 </p>
 <p>
 
@@ -217,7 +219,10 @@ Open the Network Security Group your Ubuntu VM is using and disable incoming (in
 Re-enable ICMP traffic for the Network Security Group in your Ubuntu VM and back in the Windows 10 VM, observe the ICMP traffic in WireShark and the command line ping activity (should start working again).Finally, stop the ping activity:
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+  
+![image](https://github.com/user-attachments/assets/c20f9bf0-b161-454e-b75e-9cfbc92c7bcf)
+
+
 </p>
 <p>
 
