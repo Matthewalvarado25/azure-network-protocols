@@ -212,20 +212,9 @@ Re-enable ICMP traffic for the Network Security Group in your Ubuntu VM and back
 <br />
 
 
-<p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-
-</p>
-<br />
-
-Re-enable ICMP traffic for the Network Security Group in your Ubuntu VM and back in the Windows 10 VM, observe the ICMP traffic in WireShark and the command line ping activity (should start working again).Finally, stop the ping activity:
 
 <p>
   
-![image](https://github.com/user-attachments/assets/c20f9bf0-b161-454e-b75e-9cfbc92c7bcf)
-
 
 </p>
 <p>
@@ -236,12 +225,17 @@ Re-enable ICMP traffic for the Network Security Group in your Ubuntu VM and back
 
 Time to observe SSH traffic
 
-- In Wireshark, filter for SSH traffic only and from your Windows 10 VM, “SSH into” your Ubuntu virtual machine (via its private IP address). Type commands (ls, pwd, etc) into the linux SSH connection and observe SSH traffic spam in WireShark.
+- Inside Wireshark, type in "SSH" in the search bar and hit [Enter] to apply a filter that will only display SSH traffic
+- "SSH into" your Linux(Ubuntu) virtual machine through its private IP address by typing "ssh (username)@(private IP address)" within PowerShell Ex: "ssh labuser@10.0.0.5")
+- In PowerShell, type commands (hostname, id, etc) into the Linux(ubuntu) SSH connection and observe traffic
+
 
 - Exit the SSH connection by typing ‘exit’ and pressing [return]
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+  
+![image](https://github.com/user-attachments/assets/4b595f46-190c-4993-b605-632a1891f09f)
+
 </p>
 <p>
 
@@ -253,7 +247,9 @@ Observe DHCP Traffic
 - Observe the DHCP traffic appearing in WireShark
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+  
+![image](https://github.com/user-attachments/assets/47f8014a-1b0c-428f-864e-0f32366d28c8)
+
 </p>
 <p>
 
@@ -265,7 +261,9 @@ Observe DNS traffic
 - In your Windows 10 VM inside the command line, use nslookup to see what google.com and disney.com’s IP addresses are and observe the DNS traffic being shown in WireShark
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+  
+![image](https://github.com/user-attachments/assets/3680cc10-7f08-4634-ad75-b3cd83984d61)
+
 </p>
 <p>
 
