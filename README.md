@@ -189,6 +189,8 @@ Open the Network Security Group(NSG) your Linux(Ubuntu) virtual machine is using
 
 <p>
   
+![image](https://github.com/user-attachments/assets/1d4c6274-1d32-48f4-a527-71336de16463)
+
 ![image](https://github.com/user-attachments/assets/59587692-2ac2-4d2b-b479-98c7c3259ccf)
 
 </p>
@@ -197,10 +199,12 @@ Open the Network Security Group(NSG) your Linux(Ubuntu) virtual machine is using
 </p>
 <br />
 
-Open the Network Security Group your Ubuntu VM is using and disable incoming (inbound) ICMP traffic, while back in the Windows 10 VM, observe the ICMP traffic in WireShark and the command line Ping activity:
+Re-enable ICMP traffic for the Network Security Group in your Ubuntu VM and back in the Windows 10 VM, observe the ICMP traffic in WireShark and the command line ping activity (should start working again).Finally, stop the ping activity
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+  
+![image](https://github.com/user-attachments/assets/31281179-9fc6-4dd4-9381-4ebef57806e0)
+
 </p>
 <p>
 
