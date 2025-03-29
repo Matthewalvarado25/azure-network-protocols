@@ -25,19 +25,18 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 
 - Create a resource group
 - Create a Windows 10 virtual machine
-- Create a Linux(Ubuntu) virtual machine
-- Make sure both virtual machines are in the same virtual network/subnet
+- Create a Linux (Ubuntu) virtual machine
+- Make sure both virtual machines are in the same virtual network and subnet
 - Connect to Windows 10 virtual machine
 - Install and open Wireshark on Windows 10 virtual machine
 - Observe network traffic
-- Clean up Azure environment
 
 <h2>Actions and Observations</h2>
 Create a resource group
 
-- In Azure, navigate to "Resource Groups"
+- In Azure, browse to "Resource Groups"
 - Click "Create" and fill out necessary fields
-- Review + create your resource group
+- Review and create your resource group
 
 
 <p>
@@ -52,11 +51,11 @@ Create a resource group
 <br />
 
 Create a Windows 10 Virtual Machine
-- In Azure, navigate to "Virtual Machines"
+- In Azure, browse to "Virtual Machines"
 - Click "Create" then select "Azure Virtual Machine"
 - Under "Resource group", select the resource group you just created
 - Under "Image", select the Windows 10 Pro option
-- Review + create your virtual machine
+- Review and create your virtual machine
 
 <p>
   
@@ -66,13 +65,13 @@ Create a Windows 10 Virtual Machine
 <p>
 
 Create a Linux(Ubunutu) Virtual Machine
-- In Azure, navigate to "Virtual Machines"
+- In Azure, browse to "Virtual Machines"
 - Click "Create" then select "Azure Virtual Machine"
-- Just like in the previous step, under "Resource group", select the same resource group you had just created
-- Under "Image", select the Ubuntu Server 22.04 LTS 
-- Under "Authenication type", select "password" and fill out your chosen username and password
-- Navigate to the "Networking" tab, and under "Virtual network", select the virtual network you created when creating the Windows 10 virtual machine
-- Review + create your virtual machine
+- In "Resource group", select the same resource group you had just created
+- In "Image", select the Ubuntu Server 22.04 LTS 
+- In "Authenication type", fill out your selected username and password
+- Scroll to the "Networking" tab, and under "Virtual network", select the virtual network you created when creating the Windows 10 VM
+- Review and create your virtual machine
 
 
 
@@ -99,10 +98,9 @@ Make sure both virtual machines are in the same virtual network/subnet
 <p>
 
 Connect to Windows 10 Virtual Machine
-- Open up Remote Desktop to connect to the Windows 10 virtual machine,
-- We need to find the Public IP Address to fill in the "Computer" field of Remote Desktop
-- To retrieve the public IP Address of the Windows 10 virtual machine, go to Azure, navigate to your Windows virtual machine and look for its "Public IP Address"
-- Copy the public IP address and paste it into the "Computer" field in your Remote Desktop Application and connect
+- Open up Remote Desktop to connect to the Windows 10 VM,
+- To find the the public IP Address of the Windows 10 VM, go to Azure, scroll to your Windows VM and look for its "Public IP Address"
+- Copy the public IP address and paste it into the "Computer" field in your Remote Desktop App and connect
 
 </p>
 <br />
@@ -114,13 +112,13 @@ Connect to Windows 10 Virtual Machine
 </p>
 <p>
 
-Install wireshark inside the Windows 10 VM
-- IN your Windows 10 virtual machine, open up Microsoft Edge, and download and install Wireshark
-- Open Wireshark
+Install Wireshark inside the Windows 10 VM
+- In your Windows 10 VM, open up the browser, and download and install Wireshark and open it
+
 
 Observe the network traffic
-- Open Microsoft Windows PowerShell as we prepare to observe network traffic
-- In Wireshark, start packet capture by clicking the blue fin icon at the top left(under the "File" button)
+- Open PowerShell so we can observe the network traffic
+- In Wireshark, start packet capture by clicking the blue fin at the top left
 
 <p>
   
@@ -133,11 +131,11 @@ Observe the network traffic
 <br />
 
 Lets observe ICMP traffic
-- In Wireshark, type in "ICMP" in the search bar and hit Enter to apply a filter that will only display ICMP traffic
-- In Azure, retrieve the private IP address for the Linux(Ubuntu) virtual machine you created the same way you retrieved the Windows 10 public IP address
-- After retrieving the private IP address, we are going to attempt to ping from within the Windows 10 virtual machine
-- Within PowerShell type "ping" followed by the Linux private IP address (example. "ping 10.0.0.5")
-- Observe ping requests and replies within Wireshark
+- In Wireshark, type "ICMP" in the search bar and press Enter to add a filter that will only display ICMP traffic
+- In Azure, retrieve the private IP address for the Linux(Ubuntu) virtual machine 
+- After acquring the private IP address, we are going to attempt to ping from within the Windows 10 VM
+- In PowerShell type "ping" followed by the Linux private IP address Ex: "ping 10.0.0.5"
+- Observe ping requests and replies in Wireshark
 
 <p>
   
@@ -161,7 +159,7 @@ Lets observe ICMP traffic
 
 
 
-Attempt to ping a public website within PowerShell and observe traffic (example. "ping www.google.com")
+Ping a public website in PowerShell and observe the traffic Ex: "ping www.google.com"
 
 <p>
   
@@ -173,7 +171,7 @@ Attempt to ping a public website within PowerShell and observe traffic (example.
 </p>
 <br />
 
-Initiate a perpetual/non-stop ping from your Windows 10 VM to your Ubuntu VM, type "-t" at the end of the ping (example. "ping 10.0.0.5 -t") and observe traffic
+Start a perpetual/non-stop ping from your Windows 10 VM to your Ubuntu VM, type "-t" at the end of the ping Ex: "ping 10.0.0.5 -t" and observe the traffic
 
 <p>
   
@@ -185,7 +183,7 @@ Initiate a perpetual/non-stop ping from your Windows 10 VM to your Ubuntu VM, ty
 </p>
 <br />
 
-Open the Network Security Group(NSG) your Linux(Ubuntu) virtual machine is using within Azure and disable incoming ICMP traffic by creating a port rule that denies ICMP traffic
+Open the Network Security Group(NSG) that your Linux(Ubuntu) VM is using within Azure and disable incoming ICMP traffic by creating a port rule that blocks ICMP traffic
 
 <p>
   
@@ -199,7 +197,7 @@ Open the Network Security Group(NSG) your Linux(Ubuntu) virtual machine is using
 </p>
 <br />
 
-Re-enable ICMP traffic for the Network Security Group in your Ubuntu VM and back in the Windows 10 VM, observe the ICMP traffic in WireShark and the command line ping activity (should start working again).Finally, stop the ping activity
+Unblock the ICMP traffic for the Network Security Group in your Ubuntu VM and back in the Windows 10 VM, watch the ICMP traffic in WireShark and the command line ping activity it should start working again. Finally, stop the ping activity
 
 <p>
   
@@ -225,12 +223,12 @@ Re-enable ICMP traffic for the Network Security Group in your Ubuntu VM and back
 
 Time to observe SSH traffic
 
-- Inside Wireshark, type in "SSH" in the search bar and hit [Enter] to apply a filter that will only display SSH traffic
-- "SSH into" your Linux(Ubuntu) virtual machine through its private IP address by typing "ssh (username)@(private IP address)" within PowerShell Ex: "ssh labuser@10.0.0.5")
-- In PowerShell, type commands (hostname, id, etc) into the Linux(ubuntu) SSH connection and observe traffic
+- Inside Wireshark, type in "SSH" in the search bar and press enter to apply a filter that will only show SSH traffic
+- "SSH into" your Linux(Ubuntu) VM through its private IP address by typing "ssh (username)@(private IP address)" in PowerShell Ex: "ssh labuser@10.0.0.5")
+- In PowerShell, type the commands (hostname, id, etc) into the Linux(ubuntu) SSH connection and observe traffic
 
 
-- Exit the SSH connection by typing ‘exit’ and pressing [return]
+- Exit the SSH connection by typing exit and pressing return
 
 <p>
   
@@ -243,7 +241,7 @@ Time to observe SSH traffic
 <br />
 
 Observe DHCP Traffic
-- In Wireshark, filter for DHCP traffic only. From your Windows 10 VM, attempt to issue your VM a new IP address from the command line (ipconfig /renew)
+- In Wireshark, filter for DHCP traffic only. In your Windows 10 VM, try to give your VM a new IP address from the command line (ipconfig /renew)
 - Observe the DHCP traffic appearing in WireShark
 
 <p>
@@ -258,7 +256,7 @@ Observe DHCP Traffic
 
 Observe DNS traffic
 - In Wireshark, filter for DNS traffic only
-- In your Windows 10 VM inside the command line, use nslookup to see what google.com and disney.com’s IP addresses are and observe the DNS traffic being shown in WireShark
+- In your Windows 10 VM in the command line, use nslookup to see what google.com and disney.com’s IP addresses are and observe the DNS traffic being shown in WireShark
 
 <p>
   
@@ -273,9 +271,8 @@ Observe DNS traffic
 
 Observe the RDP traffic
 
-- In Wireshark, filter for RDP traffic only using "tcp.port==3389".
-- Observe traffic
-- Notice that traffic is non-stop because the RDP protocol is constantly showing a live stream from one computer to another, so traffic is always being transmitted
+- In Wireshark, filter for RDP traffic only using "tcp.port==3389" and observe the traffic
+- Observe that traffic is non-stop because the RDP protocol is constantly showing a live stream from one computer to another, so traffic is always being sent
 
 <p>
   
@@ -291,8 +288,8 @@ Observe the RDP traffic
 
 
 Clean up you Azure Enviroment 
-- Now that we're finished observing the network, DON'T FORGET TO CLEAN UP YOUR AZURE ENVIRONMENT!
-- Close your Remote Desktop connection, delete the Resource Group(s) created at the beginning of this lab, and verify Resource Group deletion. 
+- Now that we're finished observing the network, Dont forget to clean up your Azure enviroment
+- Close your Remote Desktop connection, delete the Resource Group(s) created at the beginning of this lab, and verify Resource Group deletion
 <p>
   
 
