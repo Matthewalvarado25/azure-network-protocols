@@ -35,7 +35,7 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 Create a resource group
 
 - In Azure, browse to "Resource Groups"
-- Click "Create" and fill out necessary fields
+- Click, create and fill out necessary fields
 - Review and create your resource group
 
 
@@ -52,7 +52,7 @@ Create a resource group
 
 Create a Windows 10 Virtual Machine
 - In Azure, browse to "Virtual Machines"
-- Click "Create" then select "Azure Virtual Machine"
+- Click, create then select "Azure Virtual Machine"
 - Under "Resource group", select the resource group you just created
 - Under "Image", select the Windows 10 Pro option
 - Review and create your virtual machine
