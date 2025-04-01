@@ -132,8 +132,8 @@ Observe the network traffic
 
 Lets observe ICMP traffic
 - In Wireshark, type "ICMP" in the search bar and press Enter to add a filter that will only display ICMP traffic
-- In Azure, retrieve the private IP address for the Linux(Ubuntu) virtual machine 
-- After acquring the private IP address, we are going to attempt to ping from within the Windows 10 VM
+- In Azure, find the private IP address for the Linux(Ubuntu) virtual machine 
+- After locating the private IP address, we are going to try to ping from inside the Windows 10 VM
 - In PowerShell type "ping" followed by the Linux private IP address Ex: "ping 10.0.0.5"
 - Observe ping requests and replies in Wireshark
 
